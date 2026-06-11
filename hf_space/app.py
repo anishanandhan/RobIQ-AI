@@ -306,17 +306,7 @@ with tab_shortlist:
     # Render table in HTML for premium aesthetics
     table_rows = ""
     for idx, row in df_ranks.head(30).iterrows():
-        table_rows += f"""
-        <tr>
-            <td><b>{row['candidate_id']}</b></td>
-            <td>{row['name']}</td>
-            <td><span class="badge badge-blue">{row['score']:.4f}</span></td>
-            <td>{row['yoe']:.1f} Yrs</td>
-            <td>{row['location']}</td>
-            <td><span class="badge {'badge-green' if row['notice_period'] <= 30 else ('badge-amber' if row['notice_period'] <= 60 else 'badge-red')}">{row['notice_period']} Days</span></td>
-            <td style="max-width: 400px; font-size: 0.75rem;">{row['reasoning']}</td>
-        </tr>
-        """
+        table_rows += f"<tr><td><b>{row['candidate_id']}</b></td><td>{row['name']}</td><td><span class=\"badge badge-blue\">{row['score']:.4f}</span></td><td>{row['yoe']:.1f} Yrs</td><td>{row['location']}</td><td><span class=\"badge {'badge-green' if row['notice_period'] <= 30 else ('badge-amber' if row['notice_period'] <= 60 else 'badge-red')}\">{row['notice_period']} Days</span></td><td style=\"max-width: 400px; font-size: 0.75rem;\">{row['reasoning']}</td></tr>"
     
     st.markdown(textwrap.dedent(f"""
     <div style="overflow-x:auto;">
@@ -400,15 +390,7 @@ with tab_honeypots:
     if not df_hps.empty:
         hp_rows = ""
         for idx, row in df_hps.iterrows():
-            hp_rows += f"""
-            <tr>
-                <td><b>{row['candidate_id']}</b></td>
-                <td>{row['name']}</td>
-                <td>{row['yoe']:.1f} Yrs</td>
-                <td>{row['location']}</td>
-                <td><span class="badge badge-red">{row['reason']}</span></td>
-            </tr>
-            """
+            hp_rows += f"<tr><td><b>{row['candidate_id']}</b></td><td>{row['name']}</td><td>{row['yoe']:.1f} Yrs</td><td>{row['location']}</td><td><span class=\"badge badge-red\">{row['reason']}</span></td></tr>"
         
         st.markdown(textwrap.dedent(f"""
         <table class="data-table">
