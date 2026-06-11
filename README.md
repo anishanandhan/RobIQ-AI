@@ -4,7 +4,7 @@ A fast, interpretable candidate ranking engine that shortlist 100 matches from 1
 
 ![Screenshot](docs/screenshot.png)
 
-[Live Sandbox](https://huggingface.co/spaces/anishanandhan/RedrObIQ) | [Documentation](#) | [Architecture](#architecture)
+[Live Sandbox](https://huggingface.co/spaces/anishanandhan/RedrobIQ-AI) | [Documentation](#) | [Architecture](#architecture)
 
 ## Table of Contents
 * [About](#about)

@@ -1,5 +1,5 @@
 ---
-title: RedrobIQ Candidate Ranker
+title: RedrobIQ-AI Candidate Ranker
 emoji: 🎯
 colorFrom: blue
 colorTo: indigo
@@ -9,7 +9,7 @@ app_file: app.py
 pinned: false
 ---
 
-# RedrObIQ Candidate Ranker
+# RedrobIQ-AI Candidate Ranker
 
 An interactive Streamlit-based web dashboard to analyze, filter, and rank candidate profiles for the Senior AI Engineer (Founding Team) role.
 
