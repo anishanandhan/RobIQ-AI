@@ -149,8 +149,8 @@ Redrob/
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/anishanandhan/RedrObIQ.git
-cd RedrObIQ
+git clone https://github.com/anishanandhan/RedrobIQ-AI.git
+cd RedrobIQ-AI
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

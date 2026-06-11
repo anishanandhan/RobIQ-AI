@@ -19,7 +19,7 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/anishanandhan/RedrObIQ"
+github_repo: "https://github.com/anishanandhan/RedrobIQ-AI"
 # A working hosted environment where the ranker can be run on a small candidate sample.
 sandbox_link: "https://huggingface.co/spaces/anishanandhan/RedrObIQ"
 

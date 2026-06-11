@@ -1,5 +1,5 @@
 Contact: mailto:anishanandhan.al2022@vitstudent.ac.in
 Expires: 2027-06-11T00:00:00.000Z
 Preferred-Languages: en
-Policy: https://github.com/anishanandhan/RedrObIQ/blob/main/SECURITY.md
-Canonical: https://huggingface.co/spaces/anishanandhan/RedrObIQ/.well-known/security.txt
+Policy: https://github.com/anishanandhan/RedrobIQ-AI/blob/main/SECURITY.md
+Canonical: https://huggingface.co/spaces/anishanandhan/RedrobIQ-AI/.well-known/security.txt
