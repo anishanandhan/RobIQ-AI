@@ -308,26 +308,7 @@ with tab_shortlist:
     for idx, row in df_ranks.head(30).iterrows():
         table_rows += f"<tr><td><b>{row['candidate_id']}</b></td><td>{row['name']}</td><td><span class=\"badge badge-blue\">{row['score']:.4f}</span></td><td>{row['yoe']:.1f} Yrs</td><td>{row['location']}</td><td><span class=\"badge {'badge-green' if row['notice_period'] <= 30 else ('badge-amber' if row['notice_period'] <= 60 else 'badge-red')}\">{row['notice_period']} Days</span></td><td style=\"max-width: 400px; font-size: 0.75rem;\">{row['reasoning']}</td></tr>"
     
-    st.markdown(textwrap.dedent(f"""
-    <div style="overflow-x:auto;">
-    <table class="data-table">
-        <thead>
-            <tr>
-                <th>Candidate ID</th>
-                <th>Name</th>
-                <th>Score</th>
-                <th>Experience</th>
-                <th>Location</th>
-                <th>Notice Period</th>
-                <th>Recruiter Summary / Reasoning</th>
-            </tr>
-        </thead>
-        <tbody>
-            {table_rows}
-        </tbody>
-    </table>
-    </div>
-    """), unsafe_allow_html=True)
+    st.markdown(f'<div style="overflow-x:auto;"><table class="data-table"><thead><tr><th>Candidate ID</th><th>Name</th><th>Score</th><th>Experience</th><th>Location</th><th>Notice Period</th><th>Recruiter Summary / Reasoning</th></tr></thead><tbody>{table_rows}</tbody></table></div>', unsafe_allow_html=True)
 
 # --- Tab 2: Visual Analytics ---
 with tab_charts:
@@ -392,22 +373,7 @@ with tab_honeypots:
         for idx, row in df_hps.iterrows():
             hp_rows += f"<tr><td><b>{row['candidate_id']}</b></td><td>{row['name']}</td><td>{row['yoe']:.1f} Yrs</td><td>{row['location']}</td><td><span class=\"badge badge-red\">{row['reason']}</span></td></tr>"
         
-        st.markdown(textwrap.dedent(f"""
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Candidate ID</th>
-                    <th>Name</th>
-                    <th>Experience</th>
-                    <th>Location</th>
-                    <th>Disqualification Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                {hp_rows}
-            </tbody>
-        </table>
-        """), unsafe_allow_html=True)
+        st.markdown(f'<table class="data-table"><thead><tr><th>Candidate ID</th><th>Name</th><th>Experience</th><th>Location</th><th>Disqualification Details</th></tr></thead><tbody>{hp_rows}</tbody></table>', unsafe_allow_html=True)
     else:
         st.info("No honeypots detected in the loaded dataset.")
 
