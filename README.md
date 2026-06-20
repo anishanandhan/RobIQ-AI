@@ -2,7 +2,7 @@
 
 A fast, interpretable candidate ranking engine that shortlist 100 matches from 100,000 candidate profiles for a Founding AI Engineer role in under 20 seconds on a single CPU core.
 
-![Screenshot](docs/Redrob page.png)
+![Screenshot](docs/screenshot.png)
 
 [Live Sandbox](https://huggingface.co/spaces/anishanandhan/RobIQ-AI) | [Documentation](#) | [Architecture](#architecture)
 
