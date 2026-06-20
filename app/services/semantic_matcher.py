@@ -5,7 +5,10 @@ Use embedding-based semantic similarity instead of keyword matching
 to better understand skill relevance.
 """
 
-from typing import List, Dict, Tuple, Optional, Any
+from typing import List, Dict, Tuple, Optional
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
 
 
 class SemanticSkillMatcher:
