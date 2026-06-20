@@ -48,7 +48,7 @@ jobs:
         run: |
           python3 rank.py --candidates hf_space/sample_candidates.json --out test_out.csv --top 5
           test -f test_out.csv
-          python3 validate_submission.py team_anish.csv
+          python3 validate_submission.py team_anish_semantic.csv
 
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v4
