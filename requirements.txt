@@ -1,5 +1,5 @@
 # ── RUNTIME DEPENDENCIES ──────────────────────────────────────────────────────
-# RedrObIQ ranker itself has ZERO external runtime dependencies (uses only standard library).
+# RobIQ-AI ranker itself has ZERO external runtime dependencies (uses only standard library).
 
 # ── DEVELOPMENT & TESTING DEPENDENCIES ───────────────────────────────────────
 pytest>=9.0.0

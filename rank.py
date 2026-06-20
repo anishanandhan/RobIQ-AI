@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-RedrObIQ Ranker — Intelligent Candidate Ranking for Senior AI Engineer (Founding Team)
+RobIQ-AI Ranker — Intelligent Candidate Ranking for Senior AI Engineer (Founding Team)
 by Anish (VIT Chennai / CyStar IIT Madras)
 
 Enhanced with:
@@ -25,7 +25,7 @@ from app.services.reasoning import generate_reasoning
 
 def main():
     parser = argparse.ArgumentParser(
-        description="RedrObIQ Candidate Ranker CLI - Enhanced with Semantic + LLM Ranking"
+        description="RobIQ-AI Candidate Ranker CLI - Enhanced with Semantic + LLM Ranking"
     )
     parser.add_argument("--candidates", required=True, help="Path to candidates.jsonl or .json")
     parser.add_argument("--out", required=True, help="Output CSV path")
@@ -66,7 +66,7 @@ def main():
 
     # Display mode info
     print(f"\n{'='*80}")
-    print("RedrObIQ Enhanced Candidate Ranker")
+    print("RobIQ-AI Enhanced Candidate Ranker")
     print(f"{'='*80}")
     print(f"Mode: {args.mode.upper()}")
     print(f"Candidates: {args.candidates}")

@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-We actively maintain and support the following versions of the RedrObIQ Candidate Ranker:
+We actively maintain and support the following versions of the RobIQ-AI Candidate Ranker:
 
 | Version | Supported |
 | :--- | :--- |
@@ -15,7 +15,7 @@ If you discover a security vulnerability in this project, please report it to us
 
 Please do **NOT** open a public issue on GitHub for security vulnerabilities. Instead, report them directly by emailing:
 
-**security@redrobiq.com** (or directly to primary contact: **anishanandhan.al2022@vitstudent.ac.in**)
+**security@robiq-ai.com** (or directly to primary contact: **anishanandhan.al2022@vitstudent.ac.in**)
 
 When reporting, please include:
 1. A detailed description of the vulnerability and its potential impact.

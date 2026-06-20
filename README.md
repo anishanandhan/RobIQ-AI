@@ -1,4 +1,4 @@
-# RedrObIQ
+# RobIQ-AI
 
 A fast, interpretable candidate ranking engine that shortlist 100 matches from 100,000 candidate profiles for a Founding AI Engineer role in under 20 seconds on a single CPU core.
 
@@ -28,7 +28,7 @@ A fast, interpretable candidate ranking engine that shortlist 100 matches from 1
 ## About
 Hiring teams frequently spend hours manual-screening candidate pools, only to overlook top matches. Standard resume filters search for exact word matches, but fail to evaluate the relevance of work history, platform intent, or profile consistency. This candidate discovery challenge requires a system that identifies the best potential hires from a database of 100,000 entries.
 
-RedrObIQ solves this challenge by evaluating the entire profile—skills, career history, and engagement signals. Rather than searching for keywords, the engine evaluates candidate backgrounds against predefined templates and scores engagement data to ensure availability.
+RobIQ-AI solves this challenge by evaluating the entire profile—skills, career history, and engagement signals. Rather than searching for keywords, the engine evaluates candidate backgrounds against predefined templates and scores engagement data to ensure availability.
 
 The engine functions by passing candidate JSON lines through a multi-stage parser. It first filters out faked profiles using strict contradiction checks. Eligible candidates are then graded using weighted skill, career, and behavioral scoring rules, outputting a sorted shortlist of the top 100 candidates with auditable reasoning summaries.
 

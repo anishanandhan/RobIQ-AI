@@ -1,1 +1,1 @@
-# RedrObIQ candidate ranking engine package
+# RobIQ-AI candidate ranking engine package

@@ -9,7 +9,7 @@ from app.services.honeypot import detect_honeypot
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="RedrObIQ Candidate Ranker",
+    page_title="RobIQ-AI Candidate Ranker",
     page_icon="◆",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -205,7 +205,7 @@ head_left, head_right = st.columns([8, 1.2])
 with head_left:
     st.markdown(textwrap.dedent("""
     <div class="brand">
-        <span class="brand-name">◆ RedrObIQ Candidate Ranker</span>
+        <span class="brand-name">◆ RobIQ-AI Candidate Ranker</span>
     </div>
     """), unsafe_allow_html=True)
 with head_right:
