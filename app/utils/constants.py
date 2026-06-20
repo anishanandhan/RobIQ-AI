@@ -46,6 +46,58 @@ JD_TARGET_CITIES = [
 
 TODAY = datetime(2026, 6, 11)
 
+# ── PRIORITY 5: SKILL SYNONYMS AND VARIATIONS ────────────────────────────────
+# Map canonical skill concepts to all their variations/synonyms for better matching
+SKILL_VARIANTS = {
+    "embedding": ["embedding", "embeddings", "vector representation", "dense vector", "vector encoding", "semantic embedding"],
+    "sentence-transformer": ["sentence-transformer", "sentence transformer", "sentence transformers", "sbert", "sentence bert"],
+    "bge": ["bge", "baai general embedding", "bge-large", "bge-base"],
+    "faiss": ["faiss", "facebook ai similarity search", "similarity search index", "ann index"],
+    "qdrant": ["qdrant", "qdrant db", "qdrant database"],
+    "pinecone": ["pinecone", "pinecone db", "pinecone vector"],
+    "weaviate": ["weaviate", "weaviate db"],
+    "milvus": ["milvus", "milvus db"],
+    "opensearch": ["opensearch", "open search", "opensearch db"],
+    "elasticsearch": ["elasticsearch", "elastic search", "es", "elastic"],
+    "vector_search": ["vector search", "semantic search", "similarity search", "ann", "approximate nearest neighbor", "knn search", "nearest neighbor search"],
+    "vector_database": ["vector database", "vector db", "vector store", "embedding database", "embedding store"],
+    "hybrid_search": ["hybrid search", "hybrid retrieval", "keyword + vector", "bm25 + vector"],
+    "retrieval_augmented": ["retrieval augmented", "retrieval-augmented", "retrieval augmented generation"],
+    "rag": ["rag", "retrieval augmented generation", "retrieval-augmented generation", "rag pipeline", "rag system"],
+    "rerank": ["rerank", "re-rank", "reranking", "re-ranking", "reranker"],
+    "learning_to_rank": ["learning to rank", "learning-to-rank", "ltr", "ranknet", "lambdarank", "listnet"],
+    "information_retrieval": ["information retrieval", "ir", "search relevance", "ranking algorithm"],
+    "ndcg": ["ndcg", "normalized dcg", "normalized discounted cumulative gain", "dcg"],
+    "mrr": ["mrr", "mean reciprocal rank", "reciprocal rank"],
+    "llm": ["llm", "large language model", "language model", "gpt", "claude", "gemini", "llama", "mistral", "foundation model", "generative ai"],
+    "large_language_model": ["large language model", "llm", "language model"],
+    "ab_test": ["a/b test", "ab test", "a/b testing", "ab testing", "experimentation", "online experiment"],
+    "evaluation_framework": ["evaluation framework", "eval framework", "model evaluation", "benchmark"],
+    "lora": ["lora", "low-rank adaptation", "low rank adaptation"],
+    "qlora": ["qlora", "quantized lora", "quantised lora"],
+    "peft": ["peft", "parameter efficient fine tuning", "parameter-efficient fine-tuning"],
+    "fine_tuning": ["fine-tun", "fine tuning", "fine-tuning", "finetuning", "model tuning", "adaptation"],
+    "xgboost": ["xgboost", "xgb", "extreme gradient boosting"],
+    "lightgbm": ["lightgbm", "lgbm", "light gbm"],
+    "recommendation": ["recommendation", "recommender", "recommendation system", "recsys", "personalization"],
+    "hr_tech": ["hr tech", "hrtech", "hr technology", "recruiting tech"],
+    "recruiting": ["recruiting", "recruitment", "talent acquisition"],
+    "distributed_system": ["distributed system", "distributed systems", "distributed computing", "distributed ml"],
+    "inference_optimization": ["inference optim", "inference optimization", "model optimization", "serving optimization"],
+    "triton": ["triton", "triton inference", "nvidia triton"],
+    "onnx": ["onnx", "onnx runtime", "open neural network exchange"],
+    "open_source": ["open source", "open-source", "oss", "github"],
+    "nlp": ["nlp", "natural language processing", "text processing", "language understanding"],
+    "bert": ["bert", "bidirectional encoder", "transformers"],
+    "python": ["python", "py", "python3"],
+}
+
+# Reverse mapping: variant -> canonical concept for efficient lookups
+VARIANT_TO_CANONICAL = {}
+for canonical, variants in SKILL_VARIANTS.items():
+    for variant in variants:
+        VARIANT_TO_CANONICAL[variant.lower()] = canonical
+
 # Pre-computed weights mapping the first 50 characters of unique job description templates to their fit scores
 CAREER_TEMPLATE_WEIGHTS = {
     'Fine-tuned LLaMA-2-7B and Mistral-7B variants usin': 1.0,

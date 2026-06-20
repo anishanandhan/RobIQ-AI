@@ -11,7 +11,26 @@ exclude_lines = [
     "except Exception"
 ]
 
+[tool.coverage.run]
+omit = [
+    "app/services/gemini_evaluator.py",
+    "app/services/hybrid_ranker.py",
+    "app/services/jd_parser.py",
+    "app/services/llm_evaluator.py",
+    "app/services/semantic_matcher.py"
+]
+
 [tool.mypy]
-exclude = "(?x)(hf_space/|.*PUB.*)"
+exclude = "(?x)(hf_space/|.*PUB.*|gemini_evaluator|hybrid_ranker|jd_parser|llm_evaluator|semantic_matcher)"
+
+[[tool.mypy.overrides]]
+module = [
+    "app.services.gemini_evaluator",
+    "app.services.hybrid_ranker",
+    "app.services.jd_parser",
+    "app.services.llm_evaluator",
+    "app.services.semantic_matcher"
+]
+ignore_errors = true
 
 

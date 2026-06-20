@@ -1,5 +1,5 @@
 from datetime import datetime
-from app.utils.constants import TODAY
+from app.utils.constants import TODAY, SKILL_VARIANTS
 
 def days_since(date_str):
     """Calculate the number of days between a candidate profile date and TODAY."""
@@ -83,3 +83,12 @@ def full_text(candidate):
     skills = " ".join(skill_names(candidate))
     certs = " ".join(c.get("name","") for c in candidate.get("certifications", []))
     return summary_text(candidate) + " " + career_text(candidate) + " " + skills.lower() + " " + certs.lower()
+
+def flexible_keyword_match(text, skill_concept):
+    """
+    PRIORITY 5: Check if any variant of a skill concept is mentioned in text.
+    Handles synonyms and variations (e.g., "vector db" matches "vector database").
+    """
+    text_lower = text.lower()
+    variants = SKILL_VARIANTS.get(skill_concept, [skill_concept])
+    return any(variant in text_lower for variant in variants)

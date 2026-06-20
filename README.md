@@ -4,7 +4,7 @@ A fast, interpretable candidate ranking engine that shortlist 100 matches from 1
 
 ![Screenshot](docs/screenshot.png)
 
-[Live Sandbox](https://huggingface.co/spaces/anishanandhan/RedrobIQ-AI) | [Documentation](#) | [Architecture](#architecture)
+[Live Sandbox](https://huggingface.co/spaces/anishanandhan/RobIQ-AI) | [Documentation](#) | [Architecture](#architecture)
 
 ## Table of Contents
 * [About](#about)
@@ -149,8 +149,8 @@ Redrob/
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/anishanandhan/RedrobIQ-AI.git
-cd RedrobIQ-AI
+git clone https://github.com/anishanandhan/RobIQ-AI.git
+cd RobIQ-AI
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

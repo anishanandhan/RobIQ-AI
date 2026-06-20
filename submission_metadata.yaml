@@ -19,9 +19,9 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/anishanandhan/RedrobIQ-AI"
+github_repo: "https://github.com/anishanandhan/RobIQ-AI"
 # A working hosted environment where the ranker can be run on a small candidate sample.
-sandbox_link: "https://huggingface.co/spaces/anishanandhan/RedrobIQ-AI"
+sandbox_link: "https://huggingface.co/spaces/anishanandhan/RobIQ-AI"
 
 reproduce_command: "python3 rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
